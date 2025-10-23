@@ -1,4 +1,4 @@
-package com.directi.training.srp.exercice_refactored;
+package com.directi.training.srp.exercise_refactored;
 
 public class Car {
     private final String _id;

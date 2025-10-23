@@ -6,9 +6,9 @@ public class EncodingModuleClient {
     public static void main(String[] args) throws IOException {
         // Encodage avec fichiers
         Reader fileReader = new FileReaderImpl(
-                "DIP/src/com/directi/training/dip/exercise_refactored/beforeEncryption.txt");
+                "C:/Users/eyaam/eclipse-workspace/SOLID-main/DIP/src/com/directi/training/dip/exercise_refactored/beforeEncryption.txt");
         Writer fileWriter = new FileWriterImpl(
-                "DIP/src/com/directi/training/dip/exercise_refactored/afterEncryption.txt");
+                "C:/Users/eyaam/eclipse-workspace/SOLID-main/DIP/src/com/directi/training/dip/exercise_refactored/afterEncryption.txt");
         EncodingModule fileEncodingModule = new EncodingModule(fileReader, fileWriter);
         fileEncodingModule.encode();
 
@@ -28,7 +28,7 @@ public class EncodingModuleClient {
 
     private static void encodeFromFileToDatabase() throws IOException {
         Reader fileReader = new FileReaderImpl(
-                "DIP/src/com/directi/training/dip/exercise_refactored/beforeEncryption.txt");
+                "C:/Users/eyaam/eclipse-workspace/SOLID-main/DIP/src/com/directi/training/dip/exercise_refactored/beforeEncryption.txt");
         Writer databaseWriter = new DatabaseWriter();
         EncodingModule module = new EncodingModule(fileReader, databaseWriter);
         module.encode();
@@ -38,7 +38,7 @@ public class EncodingModuleClient {
     private static void encodeFromNetworkToFile() throws IOException {
         Reader networkReader = new NetworkReader("http", "myfirstappwith.appspot.com", "/index.html");
         Writer fileWriter = new FileWriterImpl(
-                "DIP/src/com/directi/training/dip/exercise_refactored/network_encoded.txt");
+                "C:/Users/eyaam/eclipse-workspace/SOLID-main/DIP/src/com/directi/training/dip/exercise_refactored/network_encoded.txt");
         EncodingModule module = new EncodingModule(networkReader, fileWriter);
         module.encode();
         System.out.println("Encoded from network to file");

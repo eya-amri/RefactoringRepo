@@ -1,0 +1,9 @@
+package com.directi.training.ocp.exercise;
+
+public interface Resource {
+    int allocate();
+    void free(int resourceId);
+    void markSlotBusy(int resourceId);
+    void markSlotFree(int resourceId);
+    int findFreeSlot();
+}
